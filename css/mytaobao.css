@@ -1,0 +1,476 @@
+body {
+  /* css3盒子模型，padding border 都不会影响盒子本身变化 */
+  box-sizing: border-box;
+  background-image: linear-gradient(-225deg, #fffeff 0%, #e9fafa 100%);
+}
+.w a {
+  color: black;
+}
+.indexbottom {
+  background-color: white;
+}
+.indexbottom > .w {
+  background-color: white;
+}
+.indextopleft ul li:first-child {
+  padding-left: 0;
+}
+
+/* 版心样式 */
+.Goodssubject {
+  width: 1300px;
+  margin: 0 auto;
+  /* 字体样式设置为宋体 */
+  font-family: SimSun;
+}
+/* 主题上面部分 */
+.gshead {
+  width: 100%;
+  height: 900px;
+  border: 1px solid #f5f5f5;
+}
+/* 左侧区域 */
+.gsheadleft {
+  width: 70%;
+  height: 900px;
+  float: left;
+  padding: 40px;
+}
+/* 图片放大样式修改 */
+.gsheadleft > .my-foto {
+  width: 420px;
+  height: 500px;
+}
+.gsheadleft-top-img {
+  float: left;
+}
+.gsheadleft-top-img > img {
+  width: 330px;
+  height: 400px;
+}
+/* 小图片样式 */
+.gsheadleft-top-img > .xzoom-thumbs {
+  text-align: left;
+  width: 300px;
+  margin: 20px 0 0 0;
+}
+.gsheadleft-top {
+  width: 100%;
+}
+.xzoomthumbsa > img {
+  width: 80px;
+}
+/* 右边部分的布局样式 */
+.textfont {
+  width: 408px;
+  height: 820px;
+  float: left;
+  margin-left: 20px;
+  overflow: hidden;
+}
+/* 标题部分 */
+.title-p {
+  height: 50px;
+  font-size: 28px;
+  line-height: 50px;
+  font-weight: 1000;
+  margin-left: 20px;
+}
+/* 促销部分 */
+.Promotionprice {
+  background-color: #e9e9e9;
+  height: 50px;
+  line-height: 50px;
+}
+.Promotionprice > p {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin-left: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.Promotionprice > span {
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  font-size: 30px;
+  color: red;
+  font-weight: 700;
+}
+/* 配送部分 */
+.distribution {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+/* 大小部分 */
+.textfont-size {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+}
+.textfont-size > p {
+  display: inline-block;
+  font-size: 20px;
+}
+/* 按钮组设置样式 */
+
+.textfont-size > .btn-group button {
+  width: 50px;
+  margin-right: 20px;
+}
+.textfont-size > .btn-group .btn-primary {
+  color: black;
+  background-color: lightcyan;
+}
+/* 数量部分 */
+.quantity {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.quantity > p {
+  display: inline-block;
+  font-size: 20px;
+}
+/* 购买部分 */
+.goumai {
+  height: 80px;
+  line-height: 80px;
+  margin-top: 65px;
+}
+.goumai button {
+  height: 60px;
+  margin: 20px 0 0 80px;
+}
+/* 承诺部分 */
+.chengnuo {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+.chengnuo > p {
+  display: inline-block;
+  font-size: 20px;
+}
+.chengnuo > a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.chengnuo > a:hover {
+  color: black;
+  text-decoration: none;
+}
+.chengnuo > a img {
+  margin-bottom: 5px;
+}
+/* 支付部分 */
+.zhifu {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+}
+.zhifu > p {
+  display: inline-block;
+  font-size: 20px;
+}
+.zhifu > a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.zhifu > a:hover {
+  color: black;
+  text-decoration: none;
+}
+.zhifu > a img {
+  margin-bottom: 5px;
+}
+/* 右侧区域 */
+.gsheadright {
+  width: 30%;
+  height: 900px;
+  float: left;
+}
+/* 右侧区域上面设置 */
+.gsheadright-top {
+  width: 100%;
+  height: 45%;
+  float: left;
+  border: 1px solid #fff0c3;
+}
+.gsheadright-top-top {
+  height: 60%;
+  padding: 20px;
+}
+
+/* 设置上面样式 */
+.gsheadright-top-top span {
+  width: 100%;
+  margin: 0 0 15px 30px;
+  float: left;
+  display: block;
+}
+/* 插入皇冠图片并设置样式 */
+.huangguan {
+  width: 100%;
+  height: 20%;
+  background: url(../imgs/横向/皇冠之家.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #fff0c3;
+}
+/* 设置 御宅11区 样式 */
+.gsheadright-top span:nth-child(1) {
+  font-weight: 1000;
+}
+
+/* 设置信誉栏样式 */
+.gsheadright-top span:nth-child(2) > a {
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.gsheadright-top span:nth-child(2) > a i {
+  width: 21px;
+  height: 21px;
+  float: left;
+  background: url(../imgs/小图标/皇冠.gif) no-repeat;
+  background-size: 100% 100%;
+  margin: 5px 2px 0 -5px;
+}
+/* 设置掌柜栏样式 */
+.gsheadright-top span:nth-child(3) > a {
+  color: black;
+  text-decoration: none;
+}
+/* 设置联系栏样式 */
+.gsheadright-top span:nth-child(4) > a {
+  display: inline-block;
+  width: 67px;
+  height: 20px;
+  background: url(../imgs/精灵图/和我留言等.gif) no-repeat 0 0;
+  background-size: 8em;
+}
+/* 设置资质栏样式 */
+.gsheadright-top span:nth-child(5) > a:nth-child(1) {
+  display: inline-block;
+  width: 35px;
+  height: 32px;
+  background: url(../imgs/精灵图/网页2.png) no-repeat;
+  background-position: 0px -40px;
+}
+.gsheadright-top span:nth-child(5) > a:nth-child(2) {
+  display: inline-block;
+  text-decoration: none;
+}
+.gsheadright-top span:nth-child(5) > a:nth-child(2) > p {
+  border: 1px solid #00ba97;
+  color: #00ba97;
+}
+/* 下面设置样式 */
+.gsheadright-top-bottom {
+  height: 40%;
+  padding: 30px 30px 30px 55px;
+  border-top: 2px solid #e1e1e1;
+}
+.shangbufen > ul {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 0 50px 0 0px;
+}
+.shangbufen > ul > li:nth-child(2) {
+  color: red;
+}
+.xiabufen button {
+  margin: 30px 0 0 80px;
+}
+/* 右侧区域底部设置 */
+.gsheadright-bottom {
+  width: 100%;
+  height: 55%;
+  float: left;
+  padding-top: 80px;
+  border: 1px solid #fff0c3;
+  border-top: 0;
+}
+
+/* gsbody样式 */
+.gsbody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* gsbody左边部分样式 */
+.gsbody-left {
+  width: 30%;
+}
+/* 工作时间部分样式 */
+.customer-service {
+  width: 90%;
+  height: 180px;
+}
+.customer-service > span {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  border: 1px solid #e6e3e3;
+}
+.customer-service > p {
+  display: inline-block;
+  width: 100%;
+  height: 65px;
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 60px;
+  border: 1px solid #e6e3e3;
+  border-top: 0;
+}
+.customer-service > p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 0;
+}
+.customer-service > p:nth-child(3) {
+  font-size: 20px;
+}
+/* gsbody右边部分样式 */
+.gsbody-right {
+  width: 70%;
+}
+/* 宝贝详情样式 */
+.gsbody-right > .tab-content > #home {
+  padding: 0;
+}
+/* 专享服务样式 */
+.menu2-one {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  padding: 0 20px;
+  border: 1px solid rgba(244, 247, 76, 0.911);
+  border-top: 0;
+}
+/* 专享服务顶部 */
+.menu2one-top {
+  height: 20px;
+}
+.menu2-one > .menu2one-top > img {
+  display: inline-block;
+  float: left;
+  width: 35%;
+  height: 100%;
+}
+.menu2-one > .menu2one-top > p {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+/* 专享服务底部 */
+.menu2one-bottom {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+.menu2one-bottom > span {
+  display: inline-block;
+  width: 300px;
+  height: 30px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.menu2one-bottom > p {
+  height: 25px;
+  padding-left: 75px;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+/* 发表评论 */
+
+/*msgCon begin*/
+.msgCon {
+  width: 827px;
+  margin: 0px auto;
+  margin-bottom: 60px;
+}
+
+.msgCon .msgBox {
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.msgCon .msgBox .headUrl {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px dotted #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.msgCon .msgBox .headUrl img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.msgCon .msgBox .headUrl div {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  font-size: 16px;
+  margin-left: 16px;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+}
+
+.msgCon .msgBox .headUrl div .time {
+  font-size: 14px;
+  margin-top: 6px;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+}
+
+.msgCon .msgBox .headUrl a {
+  font-size: 14px;
+  padding: 10px;
+  color: salmon;
+  cursor: pointer;
+}
+
+.msgCon .msgBox .msgTxt {
+  font-size: 14px;
+  color: #666;
+  min-height: 40px;
+  line-height: 24px;
+  padding: 10px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #778899 0%, #333 100%);
+}

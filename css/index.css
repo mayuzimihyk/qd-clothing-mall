@@ -1,0 +1,1599 @@
+/* 公共样式 */
+li {
+  /* 去掉li标签的小圆点 */
+  list-style: none;
+}
+
+a {
+  /* 去掉a标签的下划线 */
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  /* css3盒子模型，padding border 都不会影响盒子本身变化 */
+  box-sizing: border-box;
+}
+
+input,
+button {
+  /* 默认有灰色边框所以去掉 */
+  border: 0;
+  /* 去掉蓝色边框 */
+  outline: none;
+}
+
+/* 初始化样式 */
+/* 版心 */
+.w {
+  width: 1300px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 auto;
+  /* 字体样式设置为宋体 */
+  font-family: SimSun;
+}
+
+.wtwo {
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eaf7ff;
+}
+
+.wtwo > .w {
+  height: 120px;
+  background-color: #eaf7ff;
+  border-bottom: none;
+}
+
+/* 侧边淘宝图标的样式 */
+.Taobao-icon {
+  width: 55px;
+  height: 60px;
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  border-radius: 1px;
+  z-index: 100;
+  opacity: 0.5;
+  background: url(../imgs/精灵图/固定侧边栏的精灵图.jpg) no-repeat;
+}
+
+.Taobao-icon:hover {
+  opacity: 1;
+}
+
+/* 让侧边图标跟随页面大小改变，例如缩放问题 */
+@media screen and (max-height: 900px) {
+  .Taobao-icon {
+    top: 40%;
+    transition: all 0.1s;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .Taobao-icon {
+    top: 30%;
+    transition: all 0.1s;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .Taobao-icon {
+    top: 10%;
+    transition: all 0.1s;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .Taobao-icon {
+    top: 0;
+    background: none;
+    transition: all 0.1s;
+  }
+}
+
+/* 点击回到顶部的样式制作 */
+.Backtothetop {
+  position: absolute;
+  right: 50px;
+  top: 800px;
+  width: 150px;
+  height: 174px;
+  /* 定义鼠标放到元素边界时所用的小手形状 */
+  cursor: pointer;
+  /* background-color: pink; */
+}
+
+.Backtothetop .thetop {
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/精灵图/回到顶部.png) no-repeat -600px 0;
+  display: none;
+}
+
+.Backtothetop .thetop:hover {
+  background: url(../imgs/精灵图/回到顶部.png) no-repeat;
+  /* 定义动画样式thetop  */
+  animation: thetop 0.5s steps(4) infinite;
+}
+
+@keyframes thetop {
+  0% {
+    background-position: -600px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* 首页顶端的样式 */
+.indextop {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+/* 首页顶端左边部分的样式制作 */
+.indextopleft {
+  float: left;
+}
+
+.indextopleft ul li {
+  float: left;
+}
+
+/* 个人信息样式制作 */
+.indextopleft ul li:first-child {
+  position: relative;
+  margin-right: 20px;
+  width: 82px;
+  height: 50px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.indextopleft ul li:first-child:hover {
+  background-color: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.indextopleft ul li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  transform: rotate(45deg);
+}
+
+/* 手机逛淘宝样式制作 */
+.indextopleft ul li:last-child {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+/* 个人信息下的 */
+.indextopleftli-hover {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  width: 400px;
+  height: 183px;
+  background-color: white;
+  z-index: 99;
+  display: none;
+}
+
+.indextopleftli-hover > a {
+  position: absolute;
+  top: 20px;
+  right: 65px;
+}
+
+.indextopleftli-hover a:hover {
+  color: red;
+}
+
+.indextopleftli-hover > a img {
+  position: absolute;
+  top: 5px;
+  left: -245px;
+  width: 70px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.indextopleftli-hover p {
+  position: relative;
+  top: 50px;
+  left: 275px;
+}
+
+.indextopleftli-hover .hover-bottom {
+  position: relative;
+  bottom: -20px;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff0e8;
+  width: 350px;
+  height: 30px;
+}
+
+/* 首页顶端右边部分的样式制作 */
+.indextopright {
+  float: right;
+}
+
+.indextopright ul li {
+  position: relative;
+  float: left;
+  width: 90px;
+  height: 50px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* 我的淘宝样式制作 */
+.indextopright ul li:nth-child(2) > a {
+  width: 90px;
+  height: 50px;
+}
+
+.indextopright ul li:nth-child(2):hover {
+  background-color: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.indextopright ul li:nth-child(2) .wdtbbox {
+  position: absolute;
+  top: 50px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  width: 90px;
+  height: 100px;
+  z-index: 9999;
+  padding: 10px 0;
+  background-color: red;
+  /* display: none; */
+  overflow: hidden;
+}
+
+.indextopright ul li:nth-child(2) .wdtbbox a {
+  /* 因为a标签是行内元素，所以这里转成块级元素影响宽高 */
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  color: black;
+}
+
+/* 购物车样式制作 */
+.indextopright ul li:nth-child(3):hover {
+  background-color: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.indextopright ul li:nth-child(3)::before {
+  content: "";
+  /* 在前面插入图标 */
+  background-image: url(../imgs/小图标/购物车图标.png);
+  background-repeat: no-repeat;
+  /* 设置该图片的宽高 */
+  background-size: 100% 100%;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.goshopping {
+  display: inline-block;
+  width: 90px;
+  height: 50px;
+}
+
+.shopping-cart {
+  position: absolute;
+  top: 50px;
+  left: -1px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  width: 300px;
+  height: 55px;
+  background-color: white;
+  display: none;
+}
+
+.shopping-cart > p {
+  float: left;
+  height: 55px;
+  padding-left: 40px;
+}
+
+.shopping-cart > p i {
+  background-color: bisque;
+}
+
+.shopping-cart > p a {
+  float: right;
+  display: block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 12px;
+  color: white;
+  background-color: #ff4400;
+  border-radius: 5px;
+}
+
+/* 千牛卖家中心样式制作 */
+.indextopright ul li:nth-child(6) {
+  width: 110px;
+}
+
+.indextopright ul li:nth-child(6):hover {
+  background-color: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.qianniu-twomenu {
+  position: absolute;
+  top: 50px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  width: 90px;
+  height: 170px;
+  display: none;
+}
+
+.qianniu-twomenu a {
+  /* 因为a标签是行内元素，所以这里转成块级元素影响宽高 */
+  display: block;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.qianniu-twomenu a:first-child {
+  margin-top: 10px;
+}
+
+.qianniu-twomenu a:last-child {
+  margin-bottom: 10px;
+}
+
+/* 联系客服样式制作 */
+.indextopright ul li:nth-child(7):hover {
+  background-color: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.Contact-customer-service {
+  position: absolute;
+  top: 50px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  width: 90px;
+  height: 100px;
+  display: none;
+}
+
+.Contact-customer-service a:first-child {
+  /* 因为a标签是行内元素，所以这里转成块级元素影响宽高 */
+  display: block;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px;
+}
+
+.Contact-customer-service a:last-child {
+  /* 因为a标签是行内元素，所以这里转成块级元素影响宽高 */
+  display: block;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+/* 网站导航样式制作 */
+
+.indextopright ul li:nth-child(8):hover {
+  background-color: white;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.Site-navigation {
+  position: absolute;
+  top: 50px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  width: 90px;
+  height: 170px;
+  display: none;
+}
+
+.Site-navigation a {
+  /* 因为a标签是行内元素，所以这里转成块级元素影响宽高 */
+  display: block;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.Site-navigation a:first-child {
+  margin-top: 10px;
+}
+
+.Site-navigation a:last-child {
+  margin-bottom: 10px;
+}
+
+/* 首页header样式制作 */
+.indexheader {
+  z-index: 99;
+  height: 80px;
+}
+
+.indexheader > .w {
+  width: 1000px;
+  height: 80px;
+  background-color: white;
+  border-bottom: 0;
+}
+
+/* 首页header顶端的样式 */
+.headertop {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+/* 首页header顶端左边的样式 */
+.headertopleft {
+  float: left;
+  width: 50%;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.headertopleft a:first-child {
+  float: left;
+  display: block;
+  width: 90px;
+  height: 33px;
+  background: url(../imgs/精灵图/网页.png) no-repeat -446px -90px;
+}
+
+.headertopleft a:last-child {
+  display: block;
+  width: 45px;
+  height: 22px;
+  line-height: 22px;
+  float: left;
+  font-family: "SimHei";
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* 首页header顶端右边的样式 */
+.headertopright {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 40px;
+  padding-top: 10px;
+  /* background-color: #FFF0E8; */
+}
+
+.headertoprightsearch {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 380px;
+  height: 30px;
+  background-color: #ff4400;
+  padding: 3px 0px 3px 3px;
+  margin-right: 50px;
+}
+
+.headertoprightsearch ul li {
+  position: relative;
+  float: left;
+  height: 24px;
+  background-color: white;
+  text-align: center;
+  line-height: 24px;
+}
+
+/* 本店的样式制作 */
+.headertoprightsearch ul li:nth-child(1) {
+  width: 52px;
+  font-size: 13px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #e5e5e5;
+}
+
+.headertoprightsearch ul li:nth-child(1) > p {
+  margin-right: 12px;
+  color: #9a9a9a;
+}
+
+.headertoprightsearch ul li:nth-child(1)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 39px;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  border: 5px solid transparent;
+  border-top-color: #cccccc;
+  /* 改变元素转换的中心点的位置 */
+  transform-origin: 50% 25%;
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+
+.headertoprightsearch ul li:nth-child(1):hover::after {
+  transform: rotate(180deg);
+}
+
+/* 文本框的样式制作search-shop */
+.headertoprightsearch ul li:nth-child(2) > input {
+  width: 250px;
+  margin-left: 5px;
+}
+
+/* 搜索框的样式制作 */
+.headertoprightsearch ul li:nth-child(3) {
+  width: 70px;
+  text-align: center;
+  color: white;
+  background-color: #ff4400;
+  font-weight: 700;
+}
+
+/* 首页herader底部的样式 */
+.headerbottom {
+  float: left;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  font-weight: 400;
+}
+
+/* 首页headerbottom左边样式制作 */
+.headerbottomleft {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  float: left;
+  z-index: 98;
+  /* background-color: pink; */
+}
+
+/* 首页headerbottom左边第一个盒子的样式制作 */
+.headerbottomleft > .headerbottomleftone p,
+.headerbottomleftone a {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 7px;
+  text-align: center;
+}
+
+.headerbottomleft p:last-child {
+  width: 80px;
+  background-color: #fe9970;
+  border-radius: 5px;
+  color: white;
+  margin-left: 3px;
+}
+
+/* 首页headerbottom左边第二个盒子的样式制作 */
+.headerbottomlefttwo {
+  display: block;
+  float: left;
+  width: 88px;
+  height: 30px;
+  /* background-color: #FF4400; */
+  padding: 0 8px;
+  line-height: 30px;
+}
+
+.headerbottomlefttwo .headerbottomlefttwo-icon {
+  width: 32px;
+  height: 30px;
+  float: left;
+  background: url(../imgs/小图标/皇冠.gif) no-repeat;
+  background-size: contain;
+  margin-right: 4px;
+}
+
+/* 首页headerbottom左边第三个盒子的样式制作 */
+.headerbottomlefttreen {
+  width: 30px;
+  height: 30px;
+  float: left;
+  padding: 7px 0;
+}
+
+.headerbottomlefttreen > a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: aqua;
+  background: url(../imgs/精灵图/网页.png) no-repeat -259px 0;
+}
+
+/* 首页headerbottom左边第四个盒子的样式制作 */
+.headerbottomleftfore {
+  display: block;
+  float: left;
+  width: 260px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.headerbottomleftfore > span {
+  float: left;
+  margin-right: 4px;
+}
+
+.headerbottomleftfore > span:nth-child(3n) {
+  color: red;
+}
+
+.headerbottomleftfore > span:nth-child(4) {
+  color: #8fb4d7;
+}
+
+.headerbottomleftfore > span:nth-child(7) {
+  color: #8fb4d7;
+}
+
+/* 首页headerbottom左边第五个盒子的样式制作 */
+.headerbottomleftmenu {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 500px;
+  height: 308px;
+  border: 1px solid #dedede;
+  border-top: 0;
+  z-index: 99;
+  display: none;
+}
+
+/* headerbottomleftmenu的第一个盒子 */
+.headerbottomleftmenuone {
+  width: 100%;
+  height: 82px;
+  background-color: white;
+}
+
+.headerbottomleftmenuone > .menuoneleft {
+  width: 50%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #dedede;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.headerbottomleftmenuone > .menuoneleft > a {
+  display: block;
+  margin-top: 10px;
+  margin-left: 35%;
+  width: 67px;
+  height: 20px;
+  background: url(../imgs/精灵图/和我留言等.gif) no-repeat 0 0;
+  background-size: 8em;
+}
+
+.headerbottomleftmenuone > .menuoneright {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.menuoneright > .menuonerighttwo {
+  position: absolute;
+  top: 17px;
+  left: 40px;
+  width: 168px;
+  height: 48px;
+  background-color: #f6f6f6;
+  padding: 5px 5px;
+}
+
+.menuonerighttwo .menuonerightleft {
+  float: left;
+  width: 44px;
+  height: 32px;
+  background: url(../imgs/精灵图/网页.png) no-repeat;
+  background-position: 0 -90px;
+  margin-right: 5px;
+}
+
+.menuonerighttwo .menuonerightright {
+  float: left;
+}
+
+.menuonerighttwo .menuonerightright p:last-child {
+  background-color: white;
+  color: black;
+}
+
+/* headerbottomleftmenu的第二个盒子 */
+.headerbottomleftmenutwo {
+  width: 498px;
+  height: 108px;
+  /* background-color: aqua; */
+}
+
+/* 左边的盒子 */
+.headerbottomleftmenutwoleft {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f6f6;
+  float: left;
+  padding-top: 15px;
+}
+
+.headerbottomleftmenutwoleft > a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../imgs/精灵图/网页.png) no-repeat;
+  background-position: -290px -20px;
+  margin-bottom: 10px;
+}
+
+/* 右边的盒子 */
+.headerbottomleftmenutworight {
+  width: 50%;
+  height: 100%;
+  background-color: #f6f6f6;
+  float: left;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.headerbottomleftmenutworight > h4 {
+  width: 180px;
+  height: 24px;
+  font-size: 13px;
+  float: left;
+  font-weight: 400;
+  margin-left: 35px;
+}
+
+.headerbottomleftmenutworight span {
+  margin-left: 12px;
+}
+
+.headerbottomleftmenutworight ul li {
+  float: left;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-left: 50px;
+}
+
+.headerbottomleftmenutworight ul li i {
+  font-style: normal;
+  font-weight: 700;
+  color: red;
+}
+
+/* headerbottomleftmenu的第三个盒子 */
+.headerbottomleftmenutreen {
+  position: relative;
+  width: 100%;
+  height: 118px;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.headerbottomleftmenutreen p {
+  background-color: white;
+}
+
+.headerbottomleftmenutreen span {
+  color: #ff900e;
+  border: 1px solid #ff900e;
+  border-left: 0;
+  margin-left: 40px;
+}
+
+.headerbottomleftmenutreen img {
+  position: absolute;
+  top: 33px;
+  left: 259px;
+  border: 1px solid #ff900e;
+}
+
+/* 首页headerbottom右边样式制作 */
+.headerbottomright {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  float: left;
+  /* background-color: aqua; */
+  line-height: 30px;
+}
+
+.headerbottomright em {
+  position: absolute;
+  top: 7px;
+  right: 100px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../imgs/精灵图/网页.png) no-repeat -792px -86px;
+}
+
+.headerbottomright p {
+  float: right;
+}
+
+.headerbottomright-box {
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  display: none;
+}
+
+/* 首页Homepageclassificationselection分类选择的样式制作 */
+.Homepageclassificationselection {
+  width: 1300px;
+  height: 40px;
+  background-color: #4e7bbe;
+  margin: 0 auto;
+}
+
+.Homepageclassificationselection > .w {
+  height: 40px;
+  background-color: #4e7bbe;
+}
+
+.Homepageclassificationselection span {
+  display: block;
+  float: left;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+
+.Homepageclassificationselection span:first-child {
+  position: relative;
+}
+
+.Homepageclassificationselection ul {
+  display: none;
+}
+
+.Homepageclassificationselection ul li {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  background-color: #bee6ff;
+  z-index: 99;
+}
+
+.Homepageclassificationselection ul li a {
+  color: #4e7bbe;
+  text-decoration: none;
+}
+
+/* 首页indexbody样式制作 */
+.indexbody {
+  height: 9810px;
+  background: url(../imgs/横向/星光之秋.jpg);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.indexbody > .w {
+  height: 9810px;
+  /* 使用css3的rgba实现背景透明，内容不透明 */
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 主体部分的大头推荐页 */
+.recommended-twobox ul li {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 1300px;
+  margin: 0 0 60px 0;
+}
+
+.recommended-twobox ul li:nth-child(1) > a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 460px;
+  height: 460px;
+  background: #fff url(../imgs/商品外套imgs/时崎狂三外套.jpg) no-repeat center
+    center;
+  border: 6px solid #4e7bbe;
+  border-radius: 10px;
+  float: left;
+}
+
+.recommended-twobox ul li:nth-child(2) > a {
+  overflow: hidden;
+  display: block;
+  width: 460px;
+  height: 460px;
+  background: #fff url(../imgs/商品T恤imgs/星尘T恤1.jpg) no-repeat center center;
+  border: 6px solid #4e7bbe;
+  border-radius: 10px;
+  float: right;
+}
+
+.recommended-twobox ul li:nth-child(3) > a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 460px;
+  height: 460px;
+  background: #fff url(../imgs/商品裤子imgs/初音未来.jpg) no-repeat center
+    center;
+  border: 6px solid #4e7bbe;
+  border-radius: 10px;
+  float: left;
+}
+
+.recommended-twobox ul li:nth-child(4) > a {
+  overflow: hidden;
+  display: block;
+  width: 460px;
+  height: 460px;
+  background: #fff url(../imgs/cosplayimgs/尤拉.jpg) no-repeat center center;
+  border: 6px solid #4e7bbe;
+  border-radius: 10px;
+  float: right;
+}
+
+.recommended-twobox ul li .recommendedtwobox-box {
+  overflow: hidden;
+  width: 320px;
+  height: 460px;
+  float: left;
+  margin: 0 0px 0 200px;
+  background-color: #eaf7ff;
+}
+
+.recommended-twobox ul li .recommendedtwobox-box .rddtbb {
+  overflow: hidden;
+  margin-top: 77px;
+}
+
+.recommended-twobox ul li .recommendedtwobox-box .rddtbb > .rddtbbspan {
+  overflow: hidden;
+  display: block;
+  width: 320px;
+  height: 94px;
+  background: url(../imgs/横向/sale.jpg) no-repeat 50% 0;
+  margin-bottom: 34px;
+}
+
+.recommended-twobox ul li .recommendedtwobox-box .rddtbb > .rddtbba {
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  height: 36px;
+  line-height: 18px;
+  color: #4e7bbe;
+  margin: 0 0 34px 20px;
+}
+
+.recommended-twobox ul li .recommendedtwobox-box .rddtbb > .rddtbbspantwo {
+  overflow: hidden;
+  display: block;
+  font-family: arial;
+  margin-left: 20px;
+  height: 22px;
+  line-height: 22px;
+  color: #4e7bbe;
+}
+
+.recommended-twobox ul li .recommendedtwobox-box .rddtbb > .rddtbbatwo {
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  width: 152px;
+  height: 36px;
+  line-height: 25px;
+  background: #bee6ff;
+  color: #4e7bbe;
+  margin: 50px 0 0 20px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+}
+/* 阴影盒子部分 */
+.recommended-twobox ul li .show {
+  box-shadow: inset 5px 5px #f5f5fd, inset -5px -5px #f5f5fd;
+  opacity: 0.9;
+  display: block;
+}
+
+.recommended-twobox ul li:nth-child(2n) .shadow {
+  right: 0px;
+}
+
+.recommended-twobox ul li > .shadow .ks-popup-content a {
+  text-decoration: none;
+  width: 460px;
+  height: 460px;
+  text-align: center;
+  color: #fff;
+}
+
+/* 主体部分的列表页 */
+.indexbody-onebox {
+  position: relative;
+  width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: 微软雅黑;
+  text-align: center;
+  color: #4e7bbe;
+}
+
+/* 每一个li盒子的样式 */
+.indexbody-onebox ul li {
+  overflow: hidden;
+  float: left;
+  margin: 30px 25px 0 0;
+  width: 300px;
+}
+
+/* li盒子下面第一个span的样式 */
+.indexbody-onebox ul li .onebox-span {
+  overflow: hidden;
+  display: block;
+  margin: 16px 25px 0 25px;
+  height: 22px;
+  line-height: 22px;
+  font-family: arial;
+  font-size: 14px;
+}
+
+.indexbody-onebox ul li .onebox-span > span {
+  font-size: 24px;
+}
+
+/* li盒子下面第一个a盒子样式制作 */
+.indexbody-onebox ul li .onebox-a {
+  overflow: hidden;
+  display: block;
+  color: #4e7bbe;
+  height: 16px;
+  line-height: 16px;
+  margin: 20px 25px 0 25px;
+  text-decoration: none;
+}
+
+.indexbody-onebox ul li a:last-child {
+  overflow: hidden;
+  display: block;
+  color: #4e7bbe;
+  width: 138px;
+  height: 28px;
+  line-height: 28px;
+  margin: 18px auto 5px auto;
+  text-decoration: none;
+  background: #bee6ff;
+  border-radius: 20px;
+}
+
+/* li盒子下面的div盒子内容样式制作 */
+.indexbody-onebox ul li .onebox {
+  overflow: hidden;
+  width: 400px;
+  height: 350px;
+  background: url(../imgs/边框图片/1.png) no-repeat;
+}
+
+.indexbody-onebox ul li .onebox a {
+  display: block;
+  overflow: hidden;
+  width: 260px;
+  height: 250px;
+  /* 插入的图片建议260*260 */
+  margin: 24px 0 0 18px;
+  border-radius: 75px 60px 40px 40px;
+}
+
+.indexbody-onebox ul li:nth-child(1) .onebox a {
+  background: #fff url(../imgs/商品T恤imgs/星尘T恤4.jpg) no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(2) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/星尘男女服装外套4.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(3) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/星尘中长款概念风衣外套.jpg)
+    no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(4) .onebox a {
+  background: #fff url(../imgs/商品T恤imgs/星尘夏季T恤.jpg) no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(5) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/星尘文字潮流主题棉外套.jpg)
+    no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(6) .onebox a {
+  background: #fff url(../imgs/商品裤子imgs/星尘拼抽绳裤子.jpg) no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(7) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/星尘羽绒服.jpg) no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(8) .onebox a {
+  background: #fff url(../imgs/商品裤子imgs/星尘周边短裤.jpg) no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(9) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/星尘星之命运外套.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(10) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/星尘连帽套头卫衣.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(11) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/琪亚娜白练卫衣.jpg) no-repeat center;
+}
+.indexbody-onebox ul li:nth-child(12) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/理之律者主题卫衣.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(13) .onebox a {
+  background: #fff url(../imgs/商品外套imgs/狂热蓝调Δ主题卫衣.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(14) .onebox a {
+  background: #fff url(../imgs/cosplayimgs/明日方舟艾雅法拉cos服.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(15) .onebox a {
+  background: #fff url(../imgs/cosplayimgs/FGO黑贞德cosplay服装.jpg) no-repeat
+    center;
+}
+.indexbody-onebox ul li:nth-child(16) .onebox a {
+  background: #fff url(../imgs/商品裤子imgs/八重樱霞影霓踪运动裤.jpg) no-repeat
+    center;
+}
+
+.indexbody-onebox ul li .onebox a span {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: url(../imgs/边框图片/2.png) no-repeat 50% 50%;
+}
+
+.indexbody-treenbox {
+  position: relative;
+  overflow: hidden;
+  width: 1300px;
+  height: 1746px;
+  background: #ffffff;
+  line-height: normal;
+  z-index: 1;
+}
+
+.indexbody-forbox {
+  position: relative;
+  overflow: hidden;
+  width: 1300px;
+  height: 1746px;
+  background: #ffffff;
+  line-height: normal;
+  z-index: 1;
+  margin: 100px 0;
+}
+
+.indexbody-treenbox > a {
+  background: url(../imgs/横向/初音未来专区.png) 50% 50% no-repeat;
+  outline: none;
+  display: block;
+  width: 1300px;
+  height: 578px;
+  top: 0px;
+  left: 0px;
+  border: none;
+  z-index: 10;
+  cursor: default;
+}
+
+.indexbody-forbox > a {
+  background: url(../imgs/横向/星尘.png) 50% 50% no-repeat;
+  outline: none;
+  display: block;
+  width: 1300px;
+  height: 578px;
+  top: 0px;
+  left: 0px;
+  border: none;
+  z-index: 10;
+  cursor: default;
+}
+
+.indexbody-treenbox .ypicplay {
+  width: 1300px;
+  height: 1168px;
+  top: 615px;
+  left: 0px;
+  z-index: 10;
+  cursor: default;
+}
+
+.indexbody-forbox .ypic {
+  width: 1300px;
+  height: 1168px;
+  top: 615px;
+  left: 0px;
+  z-index: 10;
+  cursor: default;
+}
+
+.indexbody-treenbox .ypicplay ul li {
+  outline: none;
+  width: 410px;
+  height: 534px;
+  top: 45px;
+  left: 332px;
+  border: none;
+  z-index: 10;
+
+  float: left;
+  margin-right: 35px;
+  margin-top: 50px;
+}
+
+.indexbody-forbox .ypic ul li {
+  outline: none;
+  width: 410px;
+  height: 534px;
+  top: 45px;
+  left: 332px;
+  border: none;
+  z-index: 10;
+
+  float: left;
+  margin-right: 35px;
+  margin-top: 50px;
+}
+
+.indexbody-treenbox .ypicplay ul li .litop {
+  display: block;
+  width: 100%;
+  height: 90%;
+  background-color: #f3f3f3;
+}
+
+.indexbody-forbox .ypic ul li .litop {
+  display: block;
+  width: 100%;
+  height: 90%;
+  background-color: #f3f3f3;
+}
+
+/* 图片区 */
+.indexbody-treenbox .ypicplay ul li:nth-child(1) .litop {
+  background: url(../imgs/商品裤子imgs/初音未来短裤.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-treenbox .ypicplay ul li:nth-child(2) .litop {
+  background: url(../imgs/商品T恤imgs/初音未来T恤1.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-treenbox .ypicplay ul li:nth-child(3) .litop {
+  background: url(../imgs/商品T恤imgs/初音未来T恤2.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-treenbox .ypicplay ul li:nth-child(4) .litop {
+  background: url(../imgs/商品裤子imgs/初音未来.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-treenbox .ypicplay ul li:nth-child(5) .litop {
+  background: url(../imgs/商品T恤imgs/初音未来T恤3.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-treenbox .ypicplay ul li:nth-child(6) .litop {
+  background: url(../imgs/商品T恤imgs/初音未来T恤.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(1) .litop {
+  background: url(../imgs/商品T恤imgs/星尘T恤1.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(2) .litop {
+  background: url(../imgs/商品T恤imgs/星尘T恤2.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(3) .litop {
+  background: url(../imgs/商品外套imgs/星尘男女服装外套1.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(4) .litop {
+  background: url(../imgs/商品T恤imgs/星尘T恤3.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(5) .litop {
+  background: url(../imgs/商品外套imgs/星尘男女服装外套2.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(6) .litop {
+  background: url(../imgs/商品外套imgs/星尘男女服装外套3.jpg) no-repeat;
+  background-position: center;
+}
+
+.indexbody-treenbox .ypicplay ul li .libottom {
+  display: block;
+  width: 100%;
+  height: 10%;
+}
+
+.indexbody-forbox .ypic ul li .libottom {
+  display: block;
+  width: 100%;
+  height: 10%;
+}
+
+.indexbody-treenbox .ypicplay ul li .libottom p {
+  float: left;
+  width: 70%;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.indexbody-forbox .ypic ul li .libottom p {
+  float: left;
+  width: 70%;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.indexbody-treenbox .ypicplay ul li .libottom span {
+  float: left;
+  width: 30%;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: red;
+}
+
+.indexbody-forbox .ypic ul li .libottom span {
+  float: left;
+  width: 30%;
+  height: 53px;
+  line-height: 53px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: red;
+}
+
+.indexbody-treenbox .ypicplay ul li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.indexbody-forbox .ypic ul li:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* 首页indexbottom样式制作 */
+.indexbottom {
+  height: 400px;
+  background-color: #eaf7ff;
+}
+
+.indexbottom > .w {
+  height: 400px;
+  background-color: #eaf7ff;
+}
+
+/* 首页indexbottom的顶端样式制作 */
+.indexbottomleft {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  /* background-color: red; */
+  text-align: center;
+  line-height: 60px;
+  color: #4ea4e0;
+}
+
+.indexbottomleft::after {
+  content: "|";
+  left: 646px;
+  position: absolute;
+  color: #4ea4e0;
+}
+
+.indexbottomleft a:first-child {
+  margin-right: 10px;
+  color: #4ea4e0;
+}
+
+.indexbottomleft a:last-child {
+  margin-left: 10px;
+  color: #4ea4e0;
+}
+
+/* 首页底部的横向虚线样式制作 */
+.indexbottomDottedline {
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #4e7bbe;
+}
+
+/* 首页虚线下面的盒子样式制作 */
+.indexbottombody {
+  height: 300px;
+  padding-top: 40px;
+}
+
+/* 首页indexbottombodyleft的样式制作 */
+.indexbottombodyleft {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  height: 272px;
+  color: #4c7cbe;
+  background: url(../imgs/横向/网页底部.png) no-repeat 50% 0;
+}
+
+.indexbottomleftheader {
+  height: 140px;
+}
+
+/* 首页indexbottombodyleft四个li的样式制作 */
+.indexbottombodyleft dl {
+  width: 25%;
+  height: 100%;
+  float: left;
+  border-right: 1px dashed #4e7bbe;
+}
+
+.indexbottombodyleft dl:last-child dt {
+  border-right: 0;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  border: 4px solid #4e7bbe;
+  margin: 0 auto;
+  background: url(../imgs/小图标/淘宝二维码.png) no-repeat center;
+}
+
+.indexbottombodyleft dl:last-child dd {
+  height: 16px;
+  line-height: 16px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.indexbottombodyleft dl dt {
+  height: 16px;
+  line-height: 16px;
+  overflow: hidden;
+  font-family: 微软雅黑;
+  font-size: 14px;
+  margin: 7px 30px 0 50px;
+}
+
+.indexbottombodyleft dl dd {
+  overflow: hidden;
+  height: 80px;
+  line-height: 20px;
+  margin: 18px 30px 0 50px;
+  color: #4c7cbe;
+}
+
+/* 这下面都是bootstrap框架的东西 */
+
+/* 顶端的轮播图的样式 */
+.carousel-inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 840px;
+  margin-left: -310px;
+  background-color: aqua;
+  margin-bottom: 100px;
+}
+/* 轮播图的左右按钮样式 */
+.carousel-control-prev-icon {
+  width: 50px;
+  height: 50px;
+}
+.carousel-control-next-icon {
+  width: 50px;
+  height: 50px;
+}
+/* 轮播图底部按钮的样式 */
+
+.carousel-indicators li {
+  height: 10px;
+  border-radius: 5px;
+}

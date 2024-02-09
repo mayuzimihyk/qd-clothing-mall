@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的淘宝</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="imgs/小图标/aysac-do4f2-001.ico" />
+    <!-- 引入所需要的css文件 -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/mytaobao.css" />
+    <link rel="stylesheet" href="css/classification.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.dowebok.com/demo/2014/77/css/jquery.fullPage.css"
+    />
+    <!-- 引入所需要的js文件 -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://www.dowebok.com/demo/2014/77/js/jquery.fullPage.min.js"></script>
+    <script src="https://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $.fn.fullpage({
+          slidesColor: [
+            "#0075D1",
+            "#C2E5FF",
+            "#FDF6E1",
+            "#E9E9E9",
+            "#F3F3F3",
+            "#F9F3DC",
+          ],
+          anchors: ["page1", "page2", "page3", "page4", "page5", "page6"],
+          menu: "#menu",
+          // 淡入效果，当视窗停在某一界面时候产生的效果
+          afterRender: function () {
+            // 遍历完成对top页面的七张图片的渲染
+            $(".screen-main a").each(function () {
+              // 当前遍历的对象返回rel这个属性的值
+              var $rel = $(this).attr("rel");
+              // 然后赋值到新数组里面去用，号分割成字符串数组
+              var $arr = $rel.split(",");
+              $(this).animate(
+                {
+                  // 当前元素在页面上的位置设置，这里是2,3，也就是数组里面后两个值，rel属性后两个值
+                  left: $arr[2] + "px",
+                  top: $arr[3] + "px",
+                },
+                500
+              );
+            });
+            // 匹配并规定要运行的函数，完成所有.inner标签下的a标签元素的渲染
+            $(".inner a").each(function () {
+              var $rel = $(this).attr("rel");
+              var $arr = $rel.split(",");
+              $(this).animate(
+                {
+                  left: $arr[0] + "px",
+                  top: $arr[1] + "px",
+                },
+                500
+              );
+            });
+          },
+          afterLoad: function (anchorLink, index) {
+            if (index == 1) {
+              $(".screen-main a").each(function () {
+                var $rel = $(this).attr("rel");
+                var $arr = $rel.split(",");
+                $(this).animate(
+                  {
+                    left: $arr[2] + "px",
+                    top: $arr[3] + "px",
+                  },
+                  500
+                );
+              });
+            }
+            if (index == 2 || index == 3 || index == 4 || index == 5) {
+              // 选取第index-2的元素后代中所有的a标签元素，进行每个匹配的元素规定要运行的函数
+              $(".inner")
+                .eq(index - 2)
+                .find("a")
+                .each(function () {
+                  var $rel = $(this).attr("rel");
+                  var $arr = $rel.split(",");
+                  $(this).animate(
+                    {
+                      left: $arr[2] + "px",
+                      top: $arr[3] + "px",
+                    },
+                    500
+                  );
+                });
+            }
+            // 让第六个界面的十个元素淡入 fadeIn() 方法逐渐改变被选元素的不透明度，从隐藏到可见（褪色效果）。
+            if (index == 6) {
+              $(".zanzhu-con a").fadeIn(1000);
+            }
+          },
+          // 淡出效果，当视窗从某一界面离开后产生的效果
+          onLeave: function (index, direction) {
+            if (index == 1) {
+              $(".screen-main a").each(function () {
+                var $rel = $(this).attr("rel");
+                var $arr = $rel.split(",");
+                $(this).animate(
+                  {
+                    left: $arr[0] + "px",
+                    top: $arr[1] + "px",
+                  },
+                  500
+                );
+              });
+            }
+            if (index == 2 || index == 3 || index == 4 || index == 5) {
+              $(".inner")
+                .eq(index - 2)
+                .find("a")
+                .each(function () {
+                  var $rel = $(this).attr("rel");
+                  var $arr = $rel.split(",");
+                  $(this).animate(
+                    {
+                      left: $arr[0] + "px",
+                      top: $arr[1] + "px",
+                    },
+                    500
+                  );
+                });
+            }
+            // 让第六个界面的十个元素淡出 fadeOut() 方法逐渐改变被选元素的不透明度，从可见到隐藏（褪色效果）。
+            if (index == 6) {
+              $(".zanzhu-con a").fadeOut(1000);
+            }
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- 右侧导航栏 -->
+    <ul id="menu">
+      <li data-menuanchor="page1" class="active">
+        <a href="#page1">其他推荐</a>
+      </li>
+      <li data-menuanchor="page2"><a href="#page2">查物流</a></li>
+      <li data-menuanchor="page3"><a href="#page3">随时淘</a></li>
+      <li data-menuanchor="page4"><a href="#page4">拍立淘</a></li>
+      <li data-menuanchor="page5"><a href="#page5">淘小铺</a></li>
+      <li data-menuanchor="page6"><a href="#page6">合作IP</a></li>
+    </ul>
+    <!-- top页面的设定 -->
+    <div class="section section1">
+      <!-- 首页顶端 -->
+      <section class="indextop">
+        <div class="w">
+          <div class="indextopleft">
+            <ul>
+              <li class="grxxli">
+                <a href="" class="grxx">个人信息</a>
+              </li>
+
+              <li><a href="index.html">商城首页</a></li>
+            </ul>
+          </div>
+          <div class="indextopright">
+            <ul>
+              <li>
+                <a
+                  href="https://www.taobao.com/?spm=a1z10.1-c-s.1581860521.1.69346632d89pVZ"
+                  class="taobaosy"
+                  >淘宝网首页</a
+                >
+              </li>
+              <li><a href="denglu.html" class="mytaobao">我的淘宝</a></li>
+
+              <li><a href="gouwuche.html" class="goshopping">购物车</a></li>
+              <li>
+                <a
+                  href="https://huodong.taobao.com/wow/tbhome/act/market-list?spm=a1z10.1-c-s.1997563209.1.2c706632fxQpsw"
+                  >商品分类</a
+                >
+              </li>
+              <li><a href="">免费开店</a></li>
+              <li><a href="">千牛卖家中心</a></li>
+              <li><a href="">联系客服</a></li>
+              <li><a href="">网站导航</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="screen-main">
+        <!-- rel该属性指定了目标对象到链接对象的关系。该值是空格分隔的列表类型值，前两个值是淡出位置值，后两个值是淡入位置值 -->
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-14871371264.80.722477a0IUvtT4&id=576845421983&rn=5e0e007ad0d693bb374964cce48ab48d&abbucket=11"
+          class="shi1"
+          rel="-501,-455,0,0"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/时崎狂三女.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/时崎狂三男.jpg" alt="" />
+          </div>
+        </a>
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a230r.1.14.1.1b734b29qV3z9w&id=579432899823&ns=1&abbucket=17"
+          class="shi2"
+          rel="1387,-550,665,500"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/妖狐.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/妖狐白底.jpg" alt="" />
+          </div>
+        </a>
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a312a.7700824.w4004-6291563358.6.2c811edfeOGFay&id=591580838789"
+          class="shi3"
+          rel="-619,-359,-100,450"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/折纸.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/折纸白底.jpg" alt="" />
+          </div>
+        </a>
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a312a.7700824.w4011-6291563378.179.12374d22R4j3zX&id=590950054387&rn=4daf3e980d5f16dc8bba7c38cf8458bb&abbucket=11"
+          class="shi4"
+          rel="1400,-500,300,350"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/星尘.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/星尘白底.jpg" alt="" />
+          </div>
+        </a>
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a312a.7700824.w4011-6291563378.132.19db4d22Hxc8cQ&id=593794792120&rn=989069a5af219a00d3c6c0abc1e56356&abbucket=11"
+          class="ji1"
+          rel="-328,-589,600,-30"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/折纸1.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/折纸2.jpg" alt="" />
+          </div>
+        </a>
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a312a.7700824.w4011-6291563378.196.19db4d22Hxc8cQ&id=592135197465&rn=989069a5af219a00d3c6c0abc1e56356&abbucket=11"
+          class="ji2"
+          rel="1648,-487,950,50"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/折纸11.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/折纸12.jpg" alt="" />
+          </div>
+        </a>
+        <a
+          href="https://detail.tmall.com/item.htm?spm=a312a.7700824.w4011-6291563378.248.19db4d22Hxc8cQ&id=591057898953&rn=989069a5af219a00d3c6c0abc1e56356&abbucket=11"
+          class="ji3"
+          rel="-244,-488,1100,500"
+        >
+          <div class="a__face a__face--front">
+            <img src="imgs/其他店铺/星尘1.jpg" alt="" />
+          </div>
+          <div class="a__face a__face--back">
+            <img src="imgs/其他店铺/星尘2.jpg" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- 查物流的页面 -->
+    <div class="section">
+      <div class="science-inner inner">
+        <a class="stimg6" href="javascript:;" rel="761,850,0,250"
+          ><img width="580" height="600" src="imgs/全屏滚动/查物流手机.png"
+        /></a>
+        <a class="stimg1" href="javascript:;" rel="0,-350,730,50"
+          ><img width="246" height="104" src="imgs/全屏滚动/查物流.png"
+        /></a>
+        <a class="stimg2" href="javascript:;" rel="980,2,340,120"
+          ><img width="300" height="730" src="imgs/全屏滚动/查物流中间人.png"
+        /></a>
+        <a class="stimg3" href="javascript:;" rel="-407,350,730,300"
+          ><img width="82" height="117" src="imgs/全屏滚动/查物流小人1.png"
+        /></a>
+        <a class="stimg4" href="javascript:;" rel="761,850,700,729"
+          ><img width="130" height="121" src="imgs/全屏滚动/查物流小人2.png"
+        /></a>
+        <a class="stimg5" href="javascript:;" rel="761,850,403,732"
+          ><img width="74" height="118" src="imgs/全屏滚动/查物流小人3.png"
+        /></a>
+      </div>
+    </div>
+    <!-- 随时淘的页面 -->
+    <div class="section">
+      <div class="famous-inner inner">
+        <a class="faimg6" href="javascript:;" rel="-300,387,400,250"
+          ><img width="580" height="600" src="imgs/全屏滚动/随时淘手机.png"
+        /></a>
+        <a class="faimg1" href="javascript:;" rel="200,-180,0,300"
+          ><img width="246" height="104" src="imgs/全屏滚动/随时淘.png"
+        /></a>
+        <a class="faimg2" href="javascript:;" rel="980,77,340,150"
+          ><img width="300" height="700" src="imgs/全屏滚动/随时淘中间人.png"
+        /></a>
+        <a class="faimg3" href="javascript:;" rel="980,366,650,400"
+          ><img width="150" height="154" src="imgs/全屏滚动/随时淘小人.png"
+        /></a>
+        <a class="faimg4" href="javascript:;" rel="-300,387,680,730"
+          ><img width="95" height="120" src="imgs/全屏滚动/随时淘小人1.png"
+        /></a>
+        <a class="faimg5" href="javascript:;" rel="-300,387,330,760"
+          ><img width="80" height="90" src="imgs/全屏滚动/随时淘小人2.png"
+        /></a>
+      </div>
+    </div>
+    <!-- 拍立淘的页面 -->
+    <div class="section">
+      <div class="social-inner inner">
+        <a class="soimg4" href="javascript:;" rel="507,850,0,250"
+          ><img width="580" height="600" src="imgs/全屏滚动/拍立淘手机.png"
+        /></a>
+        <a class="soimg1" href="javascript:;" rel="156,-175,734,200"
+          ><img width="246" height="104" src="imgs/全屏滚动/拍立淘.png"
+        /></a>
+        <a class="soimg2" href="javascript:;" rel="-405,186,340,150"
+          ><img width="300" height="700" src="imgs/全屏滚动/拍立淘中间人.png"
+        /></a>
+        <a class="soimg3" href="javascript:;" rel="980,186,700,550"
+          ><img width="90" height="127" src="imgs/全屏滚动/拍立淘小人.png"
+        /></a>
+        <a class="soimg4" href="javascript:;" rel="507,850,700,730"
+          ><img width="150" height="120" src="imgs/全屏滚动/拍立淘小人1.png"
+        /></a>
+        <a class="soimg4" href="javascript:;" rel="507,850,300,760"
+          ><img width="110" height="90" src="imgs/全屏滚动/拍立淘小人2.png"
+        /></a>
+      </div>
+    </div>
+    <!-- 淘小铺的页面 -->
+    <div class="section">
+      <div class="net-inner inner">
+        <a class="netimg4" a href="javascript:;" rel="451,850,400,250"
+          ><img width="580" height="600" src="imgs/全屏滚动/淘小铺手机.png"
+        /></a>
+        <a class="netimg1" a href="javascript:;" rel="139,-240,0,57"
+          ><img width="246" height="104" src="imgs/全屏滚动/淘小铺.png"
+        /></a>
+        <a class="netimg2" a href="javascript:;" rel="980,96,290,150"
+          ><img width="400" height="700" src="imgs/全屏滚动/淘小铺中间人.png"
+        /></a>
+        <a class="netimg3" a href="javascript:;" rel="-435,431,179,715"
+          ><img width="174" height="135" src="imgs/全屏滚动/淘小铺小人.png"
+        /></a>
+      </div>
+    </div>
+    <!-- 合作媒体的页面 -->
+    <div class="section">
+      <div class="zanzhu">
+        <h2>本店合作IP</h2>
+        <div class="zanzhu-con">
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/初音未来.png"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/米哈游.png"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/约会大作战.png"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/星尘.jpg"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/碧蓝航线.jpg"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/明日方舟.png"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/碧蓝档案.jpg"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/偶像荣耀.jpg"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/公主连结.jpg"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/lovelive.png"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/赛马娘.jpg"
+          /></a>
+          <a href="javascript:;"
+            ><img width="220" height="130" src="imgs/小图标/第七史诗.png"
+          /></a>
+        </div>
+        <div class="foot clearfix">
+          <p class="bd">
+            如想投诉，请到<a target="_blank" href="javascript:;">淘宝网</a
+            >；如想提出意见、建议，请到<a target="_blank" href="javascript:;"
+              >意见反馈</a
+            >；想要了解您在淘宝的权利与义务，请查看<a
+              target="_blank"
+              href="javascript:;"
+              >权利声明</a
+            >。
+          </p>
+          <p class="ft">
+            &copy;2022TaoBao<a target="_blank" href="javascript:;">淘宝网必读</a
+            >|<a target="_blank" href="javascript:;">淘宝协议</a>|<a
+              target="_blank"
+              href="javascript:;"
+              >淘宝合作平台</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

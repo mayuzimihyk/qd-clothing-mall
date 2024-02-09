@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品信息</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="imgs/小图标/aysac-do4f2-001.ico" />
+    <!-- 引入所需要的css文件 -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/mytaobao.css" />
+    <link rel="stylesheet" href="css/xzoom.css" />
+    <link rel="stylesheet" href="css/pinglun.css" />
+    <!-- 商品图片的样式文件 -->
+    <!-- <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 引入所需要的js文件 -->
+    <script src="js/mytaobao.js"></script>
+    <script src="js/xzoom.min.js"></script>
+    <script src="js/zoomsl.min.js"></script>
+    <script src="js/data.js"></script>
+
+    <!-- bootstrap -->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 首页顶端 -->
+    <section class="indextop">
+      <div class="w">
+        <div class="indextopleft">
+          <ul>
+            <li class="grxxli">
+              <a href="" class="grxx">个人信息</a>
+            </li>
+
+            <li><a href="index.html">商城首页</a></li>
+          </ul>
+        </div>
+        <div class="indextopright">
+          <ul>
+            <li>
+              <a
+                href="https://www.taobao.com/?spm=a1z10.1-c-s.1581860521.1.69346632d89pVZ"
+                class="taobaosy"
+                >淘宝网首页</a
+              >
+            </li>
+            <li><a href="denglu.html" class="mytaobao">我的淘宝</a></li>
+
+            <li><a href="gouwuche.html" class="goshopping">购物车</a></li>
+            <li>
+              <a
+                href="https://huodong.taobao.com/wow/tbhome/act/market-list?spm=a1z10.1-c-s.1997563209.1.2c706632fxQpsw"
+                >商品分类</a
+              >
+            </li>
+            <li><a href="">免费开店</a></li>
+            <li><a href="">千牛卖家中心</a></li>
+            <li><a href="">联系客服</a></li>
+            <li><a href="">网站导航</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 首页顶端11区头图 -->
+    <div class="wtwo">
+      <div class="w">
+        <img src="imgs/横向/顶端横图.jpg" alt="" />
+      </div>
+    </div>
+    <!-- 首页分类选择 -->
+    <div class="Homepageclassificationselection">
+      <div class="w">
+        <span class="Homepageclassificationselectionspan"
+          >所有分类
+          <ul class="homeul">
+            <li id="coat"><a href="Classificationofgoods.html">外套</a></li>
+            <li id="tshirt"><a href="Classificationofgoods.html">T恤</a></li>
+            <li id="boots"><a href="Classificationofgoods.html">裤子</a></li>
+            <li id="cosplay">
+              <a href="Classificationofgoods.html">cosplay服装</a>
+            </li>
+          </ul>
+        </span>
+      </div>
+    </div>
+    <!-- 商品主体 -->
+    <div class="Goodssubject">
+      <div class="gshead">
+        <div class="gsheadleft">
+          <div class="gsheadleft-top">
+            <div class="gsheadleft-top-img">
+              <!-- 图片放大镜 -->
+              <!-- <img class="my-foto" src="imgs/竖向/星尘休闲寸衫.jpg" datalarge="imgs/竖向/星尘休闲寸衫.jpg"
+                            title="Фото"> -->
+              <!-- 小图片跳转 -->
+              <div class="xzoom-thumbs">
+                <!-- target="_blank" 打开新的窗口 -->
+                <!-- <a href="imgs/竖向/星尘休闲寸衫.jpg" target="_blank">
+                                <img class="xzoom-gallery" width="80" src="imgs/竖向/星尘休闲寸衫.jpg"
+                                    xpreview="imgs/竖向/星尘休闲寸衫.jpg">
+                            </a> -->
+              </div>
+            </div>
+            <div class="textfont">
+              <!-- <p class="title-p">标题</p> -->
+              <div class="Promotionprice">
+                <p>促销价:</p>
+                <!-- <span>1111.00</span> -->
+              </div>
+
+              <div class="textfont-size">
+                <p>大小</p>
+                <!-- 插入bootstrap按钮组 可以在 <div> 元素上添加 .btn-group 类来创建按钮组 -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary">S</button>
+                  <button type="button" class="btn btn-primary">M</button>
+                  <button type="button" class="btn btn-primary">L</button>
+                  <button type="button" class="btn btn-primary">XL</button>
+                  <button type="button" class="btn btn-primary">XXL</button>
+                </div>
+              </div>
+              <div class="goumai">
+                <button type="button" class="btn btn-outline-danger">
+                  加入到购物车
+                </button>
+              </div>
+              <div class="chengnuo">
+                <p>承诺</p>
+                <a
+                  href="javascript:;"
+                  title="此商品为定制，不支持7天无理由退货"
+                >
+                  <img src="imgs/小图标/七天无理由.png" alt="" />
+                  不支持七天无理由退货
+                </a>
+              </div>
+              <div class="zhifu">
+                <p>支付</p>
+                <a href="https://payservice.alipay.com/intro/index.htm?c=hb">
+                  <img src="imgs/小图标/蚂蚁.png" alt="" /> 蚂蚁花呗
+                </a>
+                <a href="https://payservice.alipay.com/intro/index.htm?c=xyk">
+                  <img src="imgs/小图标/信用卡.png" alt="" />
+                  信用卡支付
+                </a>
+                <a href="https://jf.alipay.com/prod/index.htm">
+                  <img src="imgs/小图标/集分.png" alt="" /> 集分宝
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gsheadright">
+          <div class="gsheadright-top">
+            <div class="huangguan"></div>
+            <div class="gsheadright-top-top">
+              <span>御宅11区</span>
+              <span
+                >信誉：
+                <a
+                  href="https://consumerservice.taobao.com/self-help?spm=a21pu.8253647.0.0.313f480dOLnHty#page=issue-detail&knowledgeId=1000126695"
+                >
+                  <i></i>
+                  <i></i>
+                </a>
+              </span>
+              <span
+                >掌柜：
+                <a href="index.html"> acg第11区001 </a>
+              </span>
+              <span
+                >联系：
+                <a
+                  href="javascript:;"
+                  title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。"
+                ></a>
+              </span>
+              <span
+                >资质：
+                <a
+                  href="https://help.alipay.com/lab/cateQuestion.htm?cateId=210321&pcateId=210120"
+                  title="支付宝个人认证2015-11-27"
+                ></a>
+                <a href="javascript:;" title="已缴纳1000元保证金">
+                  <p>1000元</p>
+                </a>
+              </span>
+            </div>
+            <div class="gsheadright-top-bottom">
+              <div class="shangbufen">
+                <ul>
+                  <li>描述</li>
+                  <li>4.9</li>
+                </ul>
+                <ul>
+                  <li>服务</li>
+                  <li>4.9</li>
+                </ul>
+                <ul>
+                  <li>物流</li>
+                  <li>4.9</li>
+                </ul>
+              </div>
+              <div class="xiabufen">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  id="dianpu"
+                >
+                  欢迎来到本店
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="gsheadright-bottom"></div>
+        </div>
+      </div>
+      <div class="gsbody">
+        <div class="gsbody-left">
+          <div class="customer-service">
+            <span>在线客服</span>
+            <p>工作时间</p>
+            <p>09:30AM~24:00AM</p>
+          </div>
+        </div>
+        <div class="gsbody-right">
+          <!-- 要设置选项卡是动态可切换的，可以在每个链接上添加 data-toggle="tab" 属性。
+                然后在每个选项对应的内容的上添加 .tab-pane 类，对应选项卡内容的 <div> 元素使用
+                .tab-content 类 。。
+                对于选中的首选项使用 .active 类来标记。
+                如果希望有淡入效果可以在 .tab-pane 后添加 .fade类:
+                这里我想用胶囊状的选项卡，只需要将data-toggle 属性设置为 data-toggle="pill": 即可 -->
+          <!-- 导航栏内容 -->
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#home"
+                >宝贝详情</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu1">累计评论</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu2">专享服务</a>
+            </li>
+          </ul>
+
+          <!-- Tab内容 -->
+          <div class="tab-content">
+            <!-- 宝贝详情 -->
+            <div class="tab-pane active container" id="home"></div>
+            <!-- 累计评论 -->
+            <div class="tab-pane fade container" id="menu1">
+              <div class="order-evaluation clearfix">
+                <h4>给“本店服装”的评价</h4>
+                <p>
+                  请严肃认真对待此次评价哦！您的评价对我们真的真的非常重要！
+                </p>
+                <div class="block">
+                  <ul>
+                    <li data-default-index="0">
+                      <span>
+                        <img src="imgs/小图标/x1.png" />
+                        <img src="imgs/小图标/x1.png" />
+                        <img src="imgs/小图标/x1.png" />
+                        <img src="imgs/小图标/x1.png" />
+                        <img src="imgs/小图标/x1.png" />
+                      </span>
+                      <em class="level"></em>
+                    </li>
+                  </ul>
+                </div>
+                <div class="order-evaluation-text">
+                  本次交易完成ヾ(✿ﾟ▽ﾟ)ノ 给您留下了什么印象呢？
+                </div>
+                <div class="order-evaluation-checkbox">
+                  <ul class="clearfix">
+                    <li class="order-evaluation-check" data-impression="1">
+                      衣服质量高<i class="iconfont icon-checked">√</i>
+                    </li>
+                    <li class="order-evaluation-check" data-impression="2">
+                      发货速度快<i class="iconfont icon-checked">√</i>
+                    </li>
+                    <li class="order-evaluation-check" data-impression="3">
+                      穿出门很帅<i class="iconfont icon-checked">√</i>
+                    </li>
+                    <li class="order-evaluation-check" data-impression="4">
+                      穿出门很好看<i class="iconfont icon-checked">√</i>
+                    </li>
+                    <li class="order-evaluation-check" data-impression="5">
+                      质量有待提高<i class="iconfont icon-checked">√</i>
+                    </li>
+                    <li class="order-evaluation-check" data-impression="6">
+                      工期延误<i class="iconfont icon-checked">√</i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="order-evaluation-textarea">
+                  <textarea
+                    name="content"
+                    id="TextArea1"
+                    onKeyUp="words_deal();"
+                    class="message"
+                    contenteditable="true"
+                  ></textarea>
+                  <span>还可以输入<em id="textCount">140</em>个字</span>
+                </div>
+                <a href="javascript:;" id="order_evaluation" class="submit"
+                  >评价完成</a
+                >
+              </div>
+              <div class="msgCon"></div>
+              <div id="order_evaluate_modal" class="dmlei_tishi_info"></div>
+            </div>
+            <!-- 专项服务 -->
+            <div class="tab-pane fade container" id="menu2">
+              <div class="menu2-one">
+                <div class="menu2one-top">
+                  <img src="imgs/小图标/卖家承诺.png" alt="" />
+                  <p>卖家承诺以下服务</p>
+                  <img src="imgs/小图标/卖家承诺.png" alt="" />
+                </div>
+                <div class="menu2one-bottom">
+                  <img src="imgs/小图标/专享服务.png" alt="" />
+                  <span>消费者保障服务</span>
+                  <p>该卖家已缴纳 1000.0 元保证金。</p>
+                  <p>
+                    在确认收货 15
+                    天内，如有商品质量问题、描述不符或未收到货等，您有权申请退款或退货，来回邮费由卖家承担。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 首页底部 -->
+    <section class="indexbottom">
+      <div class="w">
+        <div class="indexbottomleft">
+          <a href="index.html">店铺首页</a>
+          <a
+            href="https://pages.tmall.com/wow/seller/act/2019seller?spm=a220o.1000855.0.0.49211256xJTZYd"
+            >关于我们</a
+          >
+        </div>
+        <div class="indexbottomDottedline"></div>
+        <div class="indexbottombody">
+          <div class="indexbottombodyleft">
+            <div class="indexbottomleftheader">
+              <dl>
+                <dt>物流配送</dt>
+                <dd>
+                  本店默认圆通快递发货,如果需要发顺丰请提前联系客服补运费。
+                </dd>
+              </dl>
+              <dl>
+                <dt>温馨提示</dt>
+                <dd>
+                  签收商品前请先检查包装是否完整，如发现有问题，一定要及时与我们的客服联系。
+                </dd>
+              </dl>
+              <dl>
+                <dt>售后保障</dt>
+                <dd>
+                  因颜色、尺寸等问题需要调换 买家需要自理来回运费，如果
+                  质量问题我们承担。
+                </dd>
+              </dl>
+              <dl>
+                <dt></dt>
+                <dd>扫一扫有惊喜哦！</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- 分类设置 -->
+  <script>
+    let homeul = this.document.querySelector(".homeul"); //获取分类元素
+    var homeullis = homeul.children;
+    // 数据渲染页分类渲染其他网页的数据存储
+    for (var i = 0; i < homeullis.length; i++) {
+      // console.log(homeullis[i].children);
+      homeullis[i].addEventListener("click", function () {
+        // console.log(this.id);
+        localStorage.setItem("homeul", JSON.stringify(this.id));
+      });
+    }
+  </script>
+  <!-- // 累计评论设置 -->
+  <script>
+    /*
+     * 根据index获取 str
+     * **/
+    function byIndexLeve(index) {
+      var str = "";
+      switch (index) {
+        case 0:
+          str = "差评";
+          break;
+        case 1:
+          str = "较差";
+          break;
+        case 2:
+          str = "中等";
+          break;
+        case 3:
+          str = "一般";
+          break;
+        case 4:
+          str = "好评";
+          break;
+      }
+      return str;
+    }
+    //  星星数量
+    var stars = [
+      ["x2.png", "x1.png", "x1.png", "x1.png", "x1.png"],
+      ["x2.png", "x2.png", "x1.png", "x1.png", "x1.png"],
+      ["x2.png", "x2.png", "x2.png", "x1.png", "x1.png"],
+      ["x2.png", "x2.png", "x2.png", "x2.png", "x1.png"],
+      ["x2.png", "x2.png", "x2.png", "x2.png", "x2.png"],
+    ];
+    $(".block li")
+      .find("img")
+      .hover(
+        function (e) {
+          var obj = $(this);
+          var index = obj.index();
+          if (index < parseInt($(".block li").attr("data-default-index")) - 1) {
+            return;
+          }
+          var li = obj.closest("li");
+          var star_area_index = li.index();
+          for (var i = 0; i < 5; i++) {
+            li.find("img")
+              .eq(i)
+              .attr("src", "imgs/小图标/" + stars[index][i]); //切换每个星星
+          }
+          $(".level").html(byIndexLeve(index));
+        },
+        function () {}
+      );
+    // 鼠标移动到星星上
+    $(".block li").hover(
+      function (e) {},
+      function () {
+        var index = $(this).attr("data-default-index"); //点击后的索引
+        index = parseInt(index);
+        // console.log("index", index);
+        $(".level").html(byIndexLeve(index - 1));
+        // console.log(byIndexLeve(index - 1));
+        $(".order-evaluation ul li:eq(0)")
+          .find("img")
+          .attr("src", "imgs/小图标/x1.png");
+        for (var i = 0; i < index; i++) {
+          $(".order-evaluation ul li:eq(0)")
+            .find("img")
+            .eq(i)
+            .attr("src", "imgs/小图标/x2.png");
+        }
+      }
+    );
+    // 鼠标点击星星
+    $(".block li")
+      .find("img")
+      .click(function () {
+        var obj = $(this);
+        var li = obj.closest("li");
+        var star_area_index = li.index();
+        var index1 = obj.index();
+        li.attr("data-default-index", parseInt(index1) + 1);
+        var index = $(".block li").attr("data-default-index"); //点击后的索引
+        index = parseInt(index);
+        // console.log("index", index);
+        $(".level").html(byIndexLeve(index - 1));
+        // console.log(byIndexLeve(index - 1));
+        $(".order-evaluation ul li:eq(0)")
+          .find("img")
+          .attr("src", "imgs/小图标/x1.png");
+        for (var i = 0; i < index; i++) {
+          $(".order-evaluation ul li:eq(0)")
+            .find("img")
+            .eq(i)
+            .attr("src", "imgs/小图标/x2.png");
+        }
+      });
+    //印象
+    $(".order-evaluation-check").click(function () {
+      if ($(this).hasClass("checked")) {
+        //当前为选中状态，需要取消
+        $(this).removeClass("checked");
+      } else {
+        //当前未选中，需要增加选中
+        $(this).addClass("checked");
+      }
+    });
+    //评价字数限制
+    function words_deal() {
+      var curLength = $("#TextArea1").val().length;
+      if (curLength > 140) {
+        var num = $("#TextArea1").val().substr(0, 140);
+        $("#TextArea1").val(num);
+        alert("超过字数限制，多出的字将被截断！");
+      } else {
+        $("#textCount").text(140 - $("#TextArea1").val().length);
+      }
+    }
+    //从缓存中获取数据并渲染
+    let msgBoxList =
+      JSON.parse(window.localStorage.getItem("msgBoxList")) || [];
+    innerHTMl(msgBoxList);
+
+    //点击发表按扭，发表内容
+    $(".submit").click(function () {
+      // 获取好评
+      var level = document.querySelector(".level").innerText;
+      let txt = $(".message").val(); //获取输入框内容
+
+      if (level != "") {
+        if (!txt) {
+          $(".message").focus(); //自动获取焦点
+          return;
+        }
+        let obj = {
+          msg: txt,
+          levels: level,
+        };
+        msgBoxList.unshift(obj); //添加到数组里
+        window.localStorage.setItem("msgBoxList", JSON.stringify(msgBoxList)); //将数据保存到缓存
+        $("#order_evaluate_modal")
+          .html("感谢您的评价！么么哒(* ￣3)(ε￣ *)")
+          .show()
+          .delay(3000)
+          .hide(500);
+
+        // 重新渲染页面 定时器
+        setTimeout(function () {
+          innerHTMl([obj]); //渲染当前输入框内容
+          $(".message").html(""); // 清空输入框
+          location.reload();
+        }, 3600);
+      } else {
+        alert("没有点评哦亲");
+      }
+    });
+
+    //删除当前数据
+    $("body").on("click", ".del", function () {
+      let index = $(this).parent().parent().index();
+      msgBoxList.splice(index, 1);
+      window.localStorage.setItem("msgBoxList", JSON.stringify(msgBoxList)); //将数据保存到缓存
+      $(this).parent().parent().remove();
+    });
+
+    //渲染html
+    function innerHTMl(List) {
+      // 设置日期时间
+      var shijian = new Date();
+      shijian.setFullYear(2022, 10, 3);
+      List = List || [];
+      // 开始渲染框架
+      List.forEach((item) => {
+        let str = `<div class='msgBox'>
+    		<div class="headUrl">
+    			<img src='imgs/竖向/76052201_p0.jpg' width='50' height='50'/>
+    			<div>
+    				<span class="title">天動瑠依|${item.levels}</span>
+    				<span class="time" id="demo">${shijian}</span>
+    			</div>
+    			<a class="del">删除</a>
+    		</div>
+    		<div class='msgTxt'>
+    			${item.msg}
+    		</div>
+    	</div>`;
+        $(".msgCon").prepend(str);
+      });
+    }
+  </script>
+</html>

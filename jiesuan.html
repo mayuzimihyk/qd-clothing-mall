@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>结算</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="imgs/小图标/aysac-do4f2-001.ico" />
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+    <!-- bootstrap -->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="css/jiesuan.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- 背景 -->
+      <div class="background">
+        <img src="imgs/横向/test1.jpg" alt="" />
+      </div>
+
+      <div class="item-bg"></div>
+
+      <div class="news-slider">
+        <div class="news-slider-bt"><p>以下是您结算的商品清单</p></div>
+        <div class="news-slider__wrp swiper-wrapper">
+          <!-- 渲染页面数据 -->
+        </div>
+        <div class="news-slider__ctr">
+          <div class="news-slider__arrows">
+            <button class="news-slider__arrow news-slider-prev">
+              <span class="icon-font">
+                <svg class="icon icon-arrow-left">
+                  <use xlink:href="#icon-arrow-left"></use>
+                </svg>
+              </span>
+            </button>
+            <button class="news-slider__arrow news-slider-next">
+              <span class="icon-font">
+                <svg class="icon icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="news-slider__pagination"></div>
+        </div>
+      </div>
+    </div>
+    <svg hidden="hidden">
+      <defs>
+        <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+          <title>arrow-left</title>
+          <path
+            d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"
+          ></path>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+          <title>arrow-right</title>
+          <path
+            d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+  </body>
+  <!-- 引入js文件 -->
+  <script src="js/jiesuan.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/data.js"></script>
+</html>
